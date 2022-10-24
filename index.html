@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text_box">
+                <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="img_box">
+                <img src="img/img1.png" id="starbucks" alt="">
+            </div>
+        </div>
+        <div class="thumb">
+            <li><img src="img/thumb1.png" onclick="img_slider('img/img1.png'); change_slide_color('#017143')" alt=""></li>
+            <li><img src="img/thumb2.png" onclick="img_slider('img/img2.png'); change_slide_color('#eb7495')" alt=""></li>
+            <li><img src="img/thumb3.png" onclick="img_slider('img/img3.png'); change_slide_color('#d752b1')" alt=""></li>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function img_slider(anything){
+            document.getElementById('starbucks').src = anything;
+        }
+        function change_slide_color(color){
+            const slide = document.querySelector('.circle');
+            slide.style.background = color;
+        }
+    </script>
+</body>
+</html>
